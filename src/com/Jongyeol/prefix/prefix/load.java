@@ -10,8 +10,8 @@ public class load {
         if(LuckPermHandler.Prefixset(player)) {
             player.setDisplayName(LuckPermHandler.getPrefix(player) + " " + player.getName());
             player.setPlayerListName(LuckPermHandler.getPrefix(player) + " " + player.getName());
-            Team t = Bukkit.getScoreboardManager().getMainScoreboard().registerNewTeam("" + player.getName());
-            t.setPrefix("");
+            //Team t = Bukkit.getScoreboardManager().getMainScoreboard().registerNewTeam("" + player.getName());
+            //t.setPrefix("");
         }
     }
 }
