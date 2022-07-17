@@ -14,10 +14,7 @@ public class LuckPermHandler {
         return LuckPermHandler.luckPerms.getGroupManager().getGroup(LuckPermHandler.luckPerms.getUserManager().getUser(player.getUniqueId()).getPrimaryGroup());
     }
     public static boolean Prefixset(Player player) {
-        if(getPrimaryGroup(player).getCachedData().getMetaData().getPrefix() == null) {
-            return false;
-        }
-        return true;
+        return getPrimaryGroup(player).getCachedData().getMetaData().getPrefix() != null;
     }
     static {
         luckPerms = LuckPermsProvider.get();

@@ -5,11 +5,9 @@ import org.bukkit.entity.Player;
 
 public class variables {
     public static boolean FoundPlayer(Player player) {
-        boolean b = false;
         for (Player player2 : Bukkit.getOnlinePlayers()){
-            if(player2.equals(player)){b = true;}
+            if(player2.equals(player)){return true;}
         }
-        if(b) { return true; }
         return false;
     }
 }

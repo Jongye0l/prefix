@@ -18,17 +18,19 @@
 ### 안내 사항 Instructions
 * 위 프로젝트는 BSD 3-clause 라이선스를 가지고 있습니다.
 * 이 플러그인을 사용하려면 [LuckPerms](https://luckperms.net/)플러그인이 필요합니다.
+* 이 플러그인을 사용하려면 [JongyeolLibrary](https://github.com/Jongye0l/JongyeolLibrary/releases/latest)플러그인이 필요합니다.
 ---
 ### 개발 환경 Development environment
 * Windows 11
 * IntelliJ IDEA 2021.3.2 (Community Edition)
 * Oracle OpenJDK 17.0.2
 * Spigot 1.17.1(3240-Spigot-6c1c1b2-332335e)
+* Spigot 1.19(R0.1-20220702.023609-40)
 ---
 ### 테스트 환경 Test environment
 * Windows 11
-* Spigot 1.18.2-R0.1-SNAPSHOT(3493-Spigot-b081915-pd46b56)
-* Minecraft 1.18.2 Feather Client(72c285f3)
+* Spigot 1.19(3540-Spigot-56be6a8-0231a37)
+* Minecraft 1.19 Feather Client(00bedfdf)
 ---
 ### 기여자 Contributors
 * Hi_Templar123 - 아이디어
