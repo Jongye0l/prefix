@@ -1,28 +1,41 @@
 package com.Jongyeol.prefix;
 
-import com.Jongyeol.prefix.prefix.Repeat;
+import com.Jongyeol.prefix.luckypermsapi.LuckyPermReload;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitTask;
 
 import java.util.logging.Level;
 
 public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
-        saveDefaultConfig();
-        FileConfiguration config = this.getConfig();
-        int d = config.getInt("reloadtime");
         getServer().getPluginManager().registerEvents(new EventListener(), this);
-        BukkitTask Repeat = new Repeat().runTaskTimer(this, 0L, d);
         if(Bukkit.getPluginManager().getPlugin("LuckPerms") == null) {
             getLogger().log(Level.SEVERE, "Luckperms 플러그인이 감지되지 않았습니다.");
             Bukkit.getPluginManager().disablePlugin(this);
+        } else {
+            new LuckyPermReload();
         }
-        if (Bukkit.getPluginManager().getPlugin("JongyeolLibrary") == null) {
+        final Plugin JongyeolLibrary = Bukkit.getPluginManager().getPlugin("JongyeolLibrary");
+        if(JongyeolLibrary == null){
             getLogger().log(Level.SEVERE, "JongyeolLibrary 플러그인이 감지되지 않았습니다.");
             Bukkit.getPluginManager().disablePlugin(this);
+        } else {
+            String version = JongyeolLibrary.getDescription().getVersion();
+            String[] versions = version.split("\\.");
+            boolean a = true;
+            if(Integer.parseInt(versions[0]) < 1){
+                a = false;
+            } else if(Integer.parseInt(versions[1]) < 1){
+                a = false;
+            } else if (Integer.parseInt(versions[2]) < 0) {
+                a = false;
+            }
+            if(!a){
+                getLogger().log(Level.SEVERE, "JongyeolLibrary 플러그인에 버전이 지원하지 않는 버전입니다. 업데이트를 해주세요!");
+                Bukkit.getPluginManager().disablePlugin(this);
+            }
         }
     }
     @Override
