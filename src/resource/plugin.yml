@@ -1,4 +1,9 @@
 name: Prefix
 main: com.Jongyeol.prefix.Main
-version: 1.1.0
+version: 1.2.0
 api-version: 1.13
+commands:
+  setprefix:
+    description: 플레이어의 칭호를 설정합니다.
+    usage: /setprefix
+    permission: Prefix.setprefix

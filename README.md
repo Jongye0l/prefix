@@ -13,18 +13,22 @@
 * tab플레이어 창에 칭호를 추가합니다.
 * 이름태그에 칭호를 추가합니다.
 * 명령어 로그에 칭호를 추가합니다.
+* 그룹 칭호외 일반 칭호도 추가합니다.
+---
+### 명령어 Command
+* /setprefix (OfflinePlayer) (prefix) - 일반 칭호 설정
 ---
 ### 안내 사항 Instructions
 * 위 프로젝트는 BSD 3-clause 라이선스를 가지고 있습니다.
 * 이 플러그인을 사용하려면 [LuckPerms](https://luckperms.net/)플러그인이 필요합니다.
-* 이 플러그인을 사용하려면 [JongyeolLibrary](https://github.com/Jongye0l/JongyeolLibrary/releases/latest)플러그인이 필요합니다.
+* 이 플러그인을 사용하려면 [JongyeolLibrary](https://github.com/Jongye0l/JongyeolLibrary/releases/latest)(1.2) 이상의 플러그인이 필요합니다.
 ---
 ### 개발 환경 Development environment
 * Windows 11
 * IntelliJ IDEA 2021.3.2 (Community Edition)
 * Oracle OpenJDK 17.0.2
 * Spigot 1.17.1(3240-Spigot-6c1c1b2-332335e)
-* Spigot 1.19(R0.1-20220702.023609-40)
+* Spigot 1.19(R0.1-20220725.090125-47)
 ---
 ### 테스트 환경 Test environment
 * Windows 11

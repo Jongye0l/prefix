@@ -1,6 +1,6 @@
 package com.Jongyeol.prefix.command;
 
-import com.Jongyeol.prefix.variables;
+import com.Jongyeol.Library.CheckSet.Other;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -12,11 +12,11 @@ public class setrank implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender Sender, Command command, String Cmd, String[] args) {
         if(args.length < 1) {
-            Sender.sendMessage(ChatColor.GREEN + "사용법 : /" + Cmd + "<player> <rank>");
+            Sender.sendMessage(ChatColor.GREEN + "사용법 : /" + Cmd + " <player> <rank>");
             return true;
         }
         Player target = Bukkit.getPlayer(args[0]);
-        if(variables.FoundPlayer(target)) {
+        if(!Other.playerCheck(target)) {
             Sender.sendMessage(ChatColor.RED + "플레이어를 찾을 수 없습니다.");
             return true;
         }
